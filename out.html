@@ -18,10 +18,26 @@ function readCookie(name) {
     }
     return null;
 }
+
+function toHash(string) {
+    let hash = 0;
+    if (string.length == 0) return hash;
+    for (i = 0; i < string.length; i++) {
+        char = string.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+    return hash;
+}
+
+function isHashMatch(zkey) {
+    return toHash(zkey) === -1238704533 || toHash(zkey) === 662262035;
+}
 </script>
 <script>
-    if (readCookie("valis2255") !== "valis2255") {
-        document.location = 'index.html'; 
+    let zkey = readCookie("valis2255");
+    if (!isHashMatch(zkey)) {
+        document.location = 'index.html';
     }
 </script>
 </head>
