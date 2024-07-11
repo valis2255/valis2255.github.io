@@ -21,8 +21,6 @@
 </form>
 <script>
 window.onload = function () {
-alert(readCookie("valis2255"));
-document.getElementById("zkey").value = toHash("LET MEOW OUT");
     if (readCookie("valis2255") === "valis2255") {
         document.getElementById("the:kurtain").style.display="none";
         document.getElementById("un1k0rn").style.display="block";
@@ -30,7 +28,7 @@ document.getElementById("zkey").value = toHash("LET MEOW OUT");
     }
 }
 function validate() {
-    if (toHash(document.getElementById("zkey").value.toUpperCase()) === -1238704533 || document.getElementById("zkey").value.toUpperCase() === "LET MEOW OUT") {
+    if (toHash(document.getElementById("zkey").value.toUpperCase()) === -1238704533 || toHash(document.getElementById("zkey").value.toUpperCase()) === "662262035") {
         createCookie("valis2255","valis2255",3);
         location.reload();
     }
