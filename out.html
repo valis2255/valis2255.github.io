@@ -12,10 +12,8 @@ font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; mar
 🦄
 <script>
 window.onload = function () {
-    if (readCookie("valis2255") === "valis2255") {
-        document.getElementById("the:kurtain").style.display="none";
-        document.getElementById("un1k0rn").style.display="block";
-
+    if (readCookie("valis2255") !== "valis2255") {
+        document.location = 'index.html'; 
     }
 }
 </script>
