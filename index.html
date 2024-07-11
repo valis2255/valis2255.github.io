@@ -21,6 +21,7 @@
 </form>
 <script>
 function maajk() {
+alert(toHash(LET ME OUT));
     if (readCookie("valis2255") === "valis2255") {
         document.getElementById("the:kurtain").style.display="none";
         document.getElementById("un1k0rn").style.display="block";
@@ -56,6 +57,15 @@ function readCookie(name) {
 
 function eraseCookie(name) {
     createCookie(name,"",-1);
+}
+
+function toHash(Str) {
+for (let character of str) {
+   let charCode = character.charCodeAt(0);
+   hashString = hashString << 5 – hashString + charCode;
+   hashString |= hashString;
+}
+return hashString;
 }
 </script>
 </body>
