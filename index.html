@@ -6,14 +6,33 @@
   body {
     background-color: #ff1987;
   }
+  .hidden { 
+    display: none; 
+  } 
 </style>
 </head>
-<body>
-<form action="/113" method="post" autocomplete="off">
-<input autofocus="" style="font-size: 21px; " type="text" placeholder="CyFi:kode" name="zkey" size="25" required=""><br>
-<button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" type="submit" value="Submit">🧸</button>
+<body onload="maajk()">
+<form id="the:kurtain" autocomplete="off">
+<input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
+<button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" value="Submit" onClick="validate">🧸</button>
+</form>
+<form id="un1k0rn" class="hidden">
+🦄
 </form>
 <script>
+function maajk() {
+    if (readCookie("valis2255") === "valis2255") {
+        document.getElementById("the:kurtain").style.display="block";
+        document.getElementById("un1k0rn").style.display="none";
+
+    }
+}
+function validate() {
+    if (document.getElementById("zkey").value.toUpperCase() === "LET ME OUT" || document.getElementById("zkey").value.toUpperCase() === "LET MEOW OUT") {
+        createCookie("valis2255","valis2255",3);
+        location.reload();
+    }
+}
 function createCookie(name,value,days) {
     if (days) {
         var date = new Date();
