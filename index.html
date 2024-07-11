@@ -59,7 +59,7 @@ function eraseCookie(name) {
     createCookie(name,"",-1);
 }
 
-function toHash(Str) {
+function toHash(str) {
 for (let character of str) {
    let charCode = character.charCodeAt(0);
    hashString = hashString << 5 – hashString + charCode;
