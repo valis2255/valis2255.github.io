@@ -6,9 +6,6 @@
   body {
 font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; margin-left: 9px; margin-right: 9px; max-width: 555px; font-size: 17px; line-height: 1.6; background-color: #ff1987; color: white;
   }
-  .hidden { 
-    display: none; 
-  } 
 </style>
 </head>
 <body>
@@ -16,21 +13,17 @@ font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; mar
 <input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
 <button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" type="submit" value="Submit">🧸</button>
 </form>
-<form id="un1k0rn" class="hidden">
-🦄
-</form>
 <script>
 window.onload = function () {
     if (readCookie("valis2255") === "valis2255") {
-        document.getElementById("the:kurtain").style.display="none";
-        document.getElementById("un1k0rn").style.display="block";
-
+        document.location = 'out.html';
     }
 }
 function validate() {
-    if (toHash(document.getElementById("zkey").value.toUpperCase()) === -1238704533 || toHash(document.getElementById("zkey").value.toUpperCase()) === "662262035") {
+    let zkey = document.getElementById("zkey").value.toUpperCase()
+    if (toHash(zkey) === -1238704533 || toHash(zkey) === "662262035") {
         createCookie("valis2255","valis2255",3);
-        location.reload();
+        document.location = 'out.html';
     }
 }
 function createCookie(name,value,days) {
