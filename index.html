@@ -64,7 +64,7 @@ function isHashMatch(zkey) {
 function validate() {
     let zkey = document.getElementById("zkey").value.toUpperCase()
     if (isHashMatch(zkey) {
-        createCookie("valis2255","zkey",3);
+        createCookie("valis2255",zkey,3);
         document.location = 'out.html';
     }
 }
