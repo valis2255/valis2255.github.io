@@ -1,0 +1,8 @@
+# robots.txt
+# last-updated @ Dec 31, 1969 6pm Texas
+
+User-agent: *
+Disallow: /
+
+# kanamanazhia
+# (there is no) ^ wwwebsite
