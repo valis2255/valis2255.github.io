@@ -7,25 +7,12 @@
 font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; margin-left: 9px; margin-right: 9px; max-width: 555px; font-size: 17px; line-height: 1.6; background-color: #ff1987; color: white;
   }
 </style>
-</head>
-<body>
-<form id="the:kurtain" autocomplete="off" onsubmit="validate()">
-<input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
-<button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" type="submit" value="Submit">🧸</button>
-</form>
 <script>
-window.onload = function () {
     if (readCookie("valis2255") === "valis2255") {
         document.location = 'out.html';
     }
-}
-function validate() {
-    let zkey = document.getElementById("zkey").value.toUpperCase()
-    if (toHash(zkey) === -1238704533 || toHash(zkey) === "662262035") {
-        createCookie("valis2255","valis2255",3);
-        document.location = 'out.html';
-    }
-}
+</script>
+<script>
 function createCookie(name,value,days) {
     if (days) {
         var date = new Date();
@@ -60,6 +47,21 @@ function toHash(string) {
         hash = hash & hash;
     }
     return hash;
+}
+</script>
+</head>
+<body>
+<form id="the:kurtain" autocomplete="off" onsubmit="validate()">
+<input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
+<button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" type="submit" value="Submit">🧸</button>
+</form>
+<script>
+function validate() {
+    let zkey = document.getElementById("zkey").value.toUpperCase()
+    if (toHash(zkey) === -1238704533 || toHash(zkey) === "662262035") {
+        createCookie("valis2255","valis2255",3);
+        document.location = 'out.html';
+    }
 }
 </script>
 </body>
