@@ -7,15 +7,25 @@
 font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; margin-left: 9px; margin-right: 9px; max-width: 555px; font-size: 17px; line-height: 1.6; background-color: #ff1987; color: white;
   }
 </style>
-</head>
-<body>
-🦄
 <script>
-window.onload = function () {
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+</script>
+<script>
     if (readCookie("valis2255") !== "valis2255") {
         document.location = 'index.html'; 
     }
-}
 </script>
+</head>
+<body>
+🦄
 </body>
 </html>
