@@ -8,11 +8,6 @@ font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; mar
   }
 </style>
 <script>
-    if (readCookie("valis2255") === "valis2255") {
-        document.location = 'out.html';
-    }
-</script>
-<script>
 function createCookie(name,value,days) {
     if (days) {
         var date = new Date();
@@ -48,6 +43,16 @@ function toHash(string) {
     }
     return hash;
 }
+
+function isHashMatch(zkey) {
+    return toHash(zkey) === -1238704533 || toHash(zkey) === 662262035;
+}
+</script>
+<script>
+    let zkey = readCookie("valis2255");
+    if (isHashMatch(they)) {
+        document.location = 'out.html';
+    }
 </script>
 </head>
 <body>
@@ -58,8 +63,8 @@ function toHash(string) {
 <script>
 function validate() {
     let zkey = document.getElementById("zkey").value.toUpperCase()
-    if (toHash(zkey) === -1238704533 || toHash(zkey) === "662262035") {
-        createCookie("valis2255","valis2255",3);
+    if (isHashMatch(zkey) {
+        createCookie("valis2255","zkey",3);
         document.location = 'out.html';
     }
 }
