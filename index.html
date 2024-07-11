@@ -11,7 +11,7 @@
   } 
 </style>
 </head>
-<body onload="maajk()">
+<body>
 <form id="the:kurtain" autocomplete="off" onsubmit="validate()">
 <input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
 <button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" type="submit" value="Submit">🧸</button>
@@ -20,7 +20,7 @@
 🦄
 </form>
 <script>
-function maajk() {
+window.onload = function () {
 alert(toHash("LET ME OUT"));
 document.getElementById("zkey").value = toHash("LET ME OUT");
     if (readCookie("valis2255") === "valis2255") {
