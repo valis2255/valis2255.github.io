@@ -8,14 +8,14 @@ font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; mar
   }
 </style>
 <script>
-function bakeKaandy(key,value,dayz) {
-    if (dayz) {
-        var date = new Date();
-        date.setTime(date.getTime()+(dayz*24*60*60*1000));
-        var expires = "; expires="+date.toGMTString();
+function bakeKaandy(key,value,daz) {
+    if (daz) {
+        var greg = new Date();
+        greg.setTime(greg.getTime()+(daz*24*60*60*1000));
+        var expirez = "; expirez="+greg.toGMTString();
     }
-    else var expires = "";
-    document.cookie = key+"="+value+expires+"; path=/";
+    else var expirez = "";
+    document.cookie = key+"="+value+expirez+"; path=/";
 }
 
 function munzhKaandy(key) {
