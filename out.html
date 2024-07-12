@@ -14,22 +14,22 @@ text-align: left; font-size: 1.0em; # font-family: Georgia; background-color: #f
   }
 </style>
 <script>
-function munzhKaandy(name) {
-    var nameEQ = name + "=";
+function munzhKaandy(key) {
+    var keyEQ = key + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
         var c = ca[i];
         while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        if (c.indexOf(keyEQ) == 0) return c.substring(keyEQ.length,c.length);
     }
     return null;
 }
 
-function enzhant(string) {
+function enzhant(zkey) {
     let hash = 0;
-    if (string.length == 0) return hash;
-    for (i = 0; i < string.length; i++) {
-        char = string.charCodeAt(i);
+    if (zkey.length == 0) return hash;
+    for (i = 0; i < zkey.length; i++) {
+        char = zkey.charCodeAt(i);
         hash = ((hash << 5) - hash) + char;
         hash = hash & hash;
     }
