@@ -8,7 +8,7 @@ font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; mar
   }
 </style>
 <script>
-function readCookie(name) {
+function munzhKaandy(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -38,7 +38,7 @@ function isHashMatch(zkey) {
 <body>
 <script>
 window.onload = function () {
-    let zkey = readCookie("valis2255");
+    let zkey = munzhKaandy("valis2255");
     if (!(zkey && isHashMatch(zkey))) {
         document.location = 'index.html';
     }
