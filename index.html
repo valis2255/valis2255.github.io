@@ -8,17 +8,17 @@ font-family: monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; mar
   }
 </style>
 <script>
-function createCookie(name,value,days) {
+function bakeKaandy(name,value,dayz) {
     if (days) {
         var date = new Date();
-        date.setTime(date.getTime()+(days*24*60*60*1000));
+        date.setTime(date.getTime()+(dayz*24*60*60*1000));
         var expires = "; expires="+date.toGMTString();
     }
     else var expires = "";
     document.cookie = name+"="+value+expires+"; path=/";
 }
 
-function readCookie(name) {
+function munzhKaandy(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -27,10 +27,6 @@ function readCookie(name) {
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
     return null;
-}
-
-function eraseCookie(name) {
-    createCookie(name,"",-1);
 }
 
 function toHash(string) {
@@ -52,8 +48,8 @@ function isHashMatch(zkey) {
 <body>
 <script>
 window.onload = function () {
-    let zkey = readCookie("valis2255");
-    if (zkey && isHashMatch(zkey)) {
+    let zkey = munzhKaandy("valis2255");
+    if (zkey && synk(zkey)) {
         document.location = 'out.html';
     }
 }
@@ -65,8 +61,8 @@ window.onload = function () {
 <script>
 function validate() {
     let zkey = document.getElementById("zkey").value.toUpperCase()
-    if (isHashMatch(zkey)) {
-        createCookie("valis2255",zkey,3);
+    if (synk(zkey)) {
+        bakeKaandy("valis2255",zkey,3);
         document.location = 'out.html';
     }
 }
