@@ -13,33 +13,7 @@ text-align: right; max-width: 520px; font-size: 0.9em; line-height: 1.9em; paddi
 text-align: left; font-size: 1.0em; # font-family: Georgia; background-color: #ff1987; line-height: 1.6em; color: white;
   }
 </style>
-<script>
-function munzhKaandy(key) {
-    var keyEQ = key + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(keyEQ) == 0) return c.substring(keyEQ.length,c.length);
-    }
-    return null;
-}
-
-function enzhant(zkey) {
-    let hash = 0;
-    if (zkey.length == 0) return hash;
-    for (i = 0; i < zkey.length; i++) {
-        char = zkey.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash;
-    }
-    return hash;
-}
-
-function synk(zkey) {
-    return enzhant(zkey) === -1238704533 || enzhant(zkey) === 662262035;
-}
-</script>
+<script src="maajk.js"></script>
 </head>
 <body>
 <script>
