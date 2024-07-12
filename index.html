@@ -54,12 +54,12 @@ window.onload = function () {
     }
 }
 </script>
-<form id="the:kurtain" autocomplete="off" onsubmit="validate()">
+<form id="the:kurtain" autocomplete="off" onsubmit="benny()">
 <input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
 <button style="width: 25%; margin-top: 4px; font-size: 18px; background-color: yellow" type="submit" value="Submit">🧸</button>
 </form>
 <script>
-function validate() {
+function benny() {
     let zkey = document.getElementById("zkey").value.toUpperCase()
     if (synk(zkey)) {
         bakeKaandy("valis2255",zkey,3);
