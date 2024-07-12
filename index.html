@@ -51,10 +51,12 @@ function isHashMatch(zkey) {
 </head>
 <body>
 <script>
+window.onload = function () {
     let zkey = readCookie("valis2255");
     if (zkey && isHashMatch(zkey)) {
         document.location = 'out.html';
     }
+}
 </script>
 <form id="the:kurtain" autocomplete="off" onsubmit="validate()">
 <input autofocus="" style="font-size: 21px;" type="text" placeholder="CyFi:kode" name="zkey" id="zkey" size="25" required=""><br>
