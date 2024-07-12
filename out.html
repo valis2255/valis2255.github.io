@@ -37,11 +37,13 @@ function isHashMatch(zkey) {
 </head>
 <body>
 <script>
+window.onload = function () {
     let zkey = readCookie("valis2255");
     if (zkey && isHashMatch(zkey)) {
     } else {
         document.location = 'index.html';
     }
+}
 </script>
 🦄
 </body>
