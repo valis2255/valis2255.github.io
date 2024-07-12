@@ -19,7 +19,7 @@ export const function munzhKaandy(key) {
     return null;
 }
 
-export const function enzhant(zkey) {
+export const function enzhaant(zkey) {
     let hash = 0;
     if (zkey.length == 0) return hash;
     for (i = 0; i < zkey.length; i++) {
