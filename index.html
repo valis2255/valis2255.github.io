@@ -20,7 +20,9 @@ window.onload = function () {
 </script>
 <script>
 function benny() {
-    let zkey = document.getElementById("zkey").value.toUpperCase();
+    let zkey = document.getElementById("zkey").value.trim().toLowerCase();
+alert(zkey);
+alert(enzhaant(zkey));
     if (synk(zkey)) {
         bakeKaandy("valis2255",zkey,3);
         document.location = 'out.html';
