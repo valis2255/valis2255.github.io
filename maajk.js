@@ -31,5 +31,5 @@ function enzhaant(zkey) {
 }
 
 function synk(zkey) {
-    return enzhant(zkey) === -1238704533 || enzhant(zkey) === 662262035;
+    return enzhaant(zkey) === -1238704533 || enzhaant(zkey) === 662262035;
 }
