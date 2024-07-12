@@ -1,4 +1,4 @@
-export const function bakeKaandy(key,value,daz) {
+function bakeKaandy(key,value,daz) {
     if (daz) {
         var greg = new Date();
         greg.setTime(greg.getTime()+(daz*24*60*60*1000));
@@ -8,7 +8,7 @@ export const function bakeKaandy(key,value,daz) {
     document.cookie = key+"="+value+expirez+"; path=/";
 }
 
-export const function munzhKaandy(key) {
+function munzhKaandy(key) {
     var keyEQ = key + "=";
     var ca = document.cookie.split(';');
     for(var i=0;i < ca.length;i++) {
@@ -19,7 +19,7 @@ export const function munzhKaandy(key) {
     return null;
 }
 
-export const function enzhaant(zkey) {
+function enzhaant(zkey) {
     let hash = 0;
     if (zkey.length == 0) return hash;
     for (i = 0; i < zkey.length; i++) {
@@ -30,6 +30,6 @@ export const function enzhaant(zkey) {
     return hash;
 }
 
-export const function synk(zkey) {
+function synk(zkey) {
     return enzhant(zkey) === -1238704533 || enzhant(zkey) === 662262035;
 }
