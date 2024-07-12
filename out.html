@@ -19,7 +19,7 @@ function munzhKaandy(name) {
     return null;
 }
 
-function toHash(string) {
+function enzhant(string) {
     let hash = 0;
     if (string.length == 0) return hash;
     for (i = 0; i < string.length; i++) {
@@ -30,8 +30,8 @@ function toHash(string) {
     return hash;
 }
 
-function isHashMatch(zkey) {
-    return toHash(zkey) === -1238704533 || toHash(zkey) === 662262035;
+function synk(zkey) {
+    return enzhant(zkey) === -1238704533 || enzhant(zkey) === 662262035;
 }
 </script>
 </head>
@@ -39,7 +39,7 @@ function isHashMatch(zkey) {
 <script>
 window.onload = function () {
     let zkey = munzhKaandy("valis2255");
-    if (!(zkey && isHashMatch(zkey))) {
+    if (!(zkey && synk(zkey))) {
         document.location = 'index.html';
     }
 }
