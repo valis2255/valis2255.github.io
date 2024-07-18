@@ -1,0 +1,9 @@
+  body {
+font-family: 'Inconsolata.zs', monospace; margin: 20px; margin-top: 51px; margin-bottom: 51px; margin-left: 9px; margin-right: 9px; max-width: 555px; font-size: 17px; line-height: 1.6; background-color: black; color: white;
+  }
+ .dr0p {
+text-align: right; max-width: 520px; font-size: 0.9em; line-height: 1.9em; padding: 12px; margin-top: 1px; margin-bottom: 0px; border-top-right-radius: 0.8em; border-top-left-radius: 0.8em; border-bottom-left-radius: 0.8em; background-color: white; border: 2px solid black;
+  }
+  .gener1k {
+text-align: left; font-size: 1.0em; # font-family: Georgia; background-color: #ff1987; line-height: 1.6em; color: white;
+  }
