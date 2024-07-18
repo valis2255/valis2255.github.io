@@ -1,20 +1,19 @@
-function bakeKaandy(key,value,daz) {
+function bakeKaandy(key, value, daz) {
     if (daz) {
         var greg = new Date();
-        greg.setTime(greg.getTime()+(daz*24*60*60*1000));
-        var expirez = "; expirez="+greg.toGMTString();
-    }
-    else var expirez = "";
-    document.cookie = key+"="+value+expirez+"; path=/";
+        greg.setTime(greg.getTime() + (daz * 24 * 60 * 60 * 1000));
+        var expirez = "; expirez=" + greg.toGMTString();
+    } else var expirez = "";
+    document.cookie = key + "=" + value + expirez + "; path=/";
 }
 
 function munzhKaandy(key) {
     var keyEQ = key + "=";
     var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(keyEQ) == 0) return c.substring(keyEQ.length,c.length);
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(keyEQ) == 0) return c.substring(keyEQ.length, c.length);
     }
     return null;
 }
